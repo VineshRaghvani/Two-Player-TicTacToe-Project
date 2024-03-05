@@ -25,7 +25,7 @@ function handleCellPlayed(clickedCell, clickedCellIndex) {
 
     gameState[clickedCellIndex] = currentPlayer;
     clickedCell.innerHTML = currentPlayer;
-}
+};
 
 function handlePlayerChange() {
     
@@ -38,7 +38,7 @@ function handlePlayerChange() {
 
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
     displayStatus.innerHTML = currentPlayerTurn();
-}
+};
 
 const winningConditions = [
     [0, 1, 2],
@@ -50,3 +50,55 @@ const winningConditions = [
     [0, 4, 8],
     [2, 4, 6],
 ];
+
+function handleResultValidation() {
+
+    /*
+    In this function we will check if the game ends with a win or a draw.
+    */
+
+    let roundWon = false;
+
+    for(let i = 0; i <= 7; i++) {
+        const winCondition = winningConditions[i];
+        let a = gameState[winCondition[0]];
+        let b = gameState[winCondition[1]];
+        let c = gameState[winCondition[2]];
+
+        if (a === '' || b === '' || c === '') {
+            continue;
+        };
+
+        if (a === b && b === c) {
+            roundWon = true;
+            break
+        };
+    };
+
+    if (roundWon) {
+        displayStatus.innerHTML = winningMessage();
+        gameActive = false;
+        return;
+    };
+
+    /*
+    We will now check to see if there are any areas in our array that have
+    not been filled in yet by a player.
+    */
+
+    let roundDraw = !gameState.includes('');
+
+    if (roundDraw) {
+        displayStatus.innerHTML = drawMessage();
+        gameActive = false;
+        return;
+    };
+
+    /*
+    Reaching to this part of the code means that there isn't a winner yet
+    and there are still moves to be played, therefore we continue by
+    changing the palyer.
+    */
+
+    handlePlayerChange();
+};
