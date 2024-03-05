@@ -16,3 +16,13 @@ const currentPlayerTurn = () => `It's ${currentPlayer}'s turn.`; //Displays this
 
 displayStatus.innerHTML = currentPlayerTurn(); //This updates the inner HTML of the 'displayStatus' element with the return value of the 'currentPlayerTurn' function.
 
+function handleCellPlayed(clickedCell, clickedCellIndex) {
+
+    /*
+    In this function we are reflecting the move that was played by the player
+    and then reflecting the result on to their display. 
+    */
+
+    gameState[clickedCellIndex] = currentPlayer;
+    clickedCell.innerHTML = currentPlayer;
+}
