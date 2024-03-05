@@ -26,3 +26,16 @@ function handleCellPlayed(clickedCell, clickedCellIndex) {
     gameState[clickedCellIndex] = currentPlayer;
     clickedCell.innerHTML = currentPlayer;
 }
+
+function handlePlayerChange() {
+    
+    /*
+    In this function we will swap between the two players after they have
+    completed their turn. So we will update the currentPlayer as well as
+    the game status by the use of a ternary operator to assign values to the 
+    new player.
+    */
+
+    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+    displayStatus.innerHTML = currentPlayerTurn();
+}
