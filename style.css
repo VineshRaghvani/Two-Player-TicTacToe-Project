@@ -1,26 +1,26 @@
 body {
-    font-family: 'Copperplate', fantasy;
+    font-family: 'Copperplate', 'Times New Roman', serif; /* Setting the font of the body */
 }
 
 section {
-    text-align: center;
+    text-align: center; /* Centers the text in 'section' element */
 }
 
 .game-container {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    width: auto;
-    margin: 50px auto;
+    display: grid; /* Displays the grid */
+    grid-template-columns: repeat(3, auto); /* Creates the 3x3 grid of equal width */
+    width: auto; /* Sets the width of the game container to adjust based on its contents */
+    margin: 50px auto; /* This centers the container horizontally and has a top and bottom margin of 50px */
 }
 
 .cell{
-    font-family: 'Monaco', monospace;
-    width: 100px;
-    height: 100px;
-    box-shadow: 0 0 0 1px #333333;
-    border: 1px solid #333333;
-    cursor: pointer;
-    line-height: 100px;
-    font-size: 50px;
+    font-family: 'Monaco', monospace; /* Setting the font of the cell container */
+    width: 100px; /* Setting the width of the cell to be 100px wide */
+    height: 100px; /* Setting the height of the cell to be 100px high */
+    box-shadow: 0 0 0 1px #333333; /* This adds a shadow effect to the cell */
+    border: 1px solid #333333; /* Adding a border to the cells */
+    cursor: pointer; /* This turns the cursor to a pointer when it hovers over the cell */
+    line-height: 100px; /* This centers the content of the cells vertically */
+    font-size: 50px; /* Setting the font-size of the cells to be 50px */
 }
 
