@@ -133,3 +133,16 @@ function handleCellClick() {
     handleCellPlayed(clickedCell, clickedCellIndex);
     handleResultValidation();
 };
+
+function handleRestartGame() {
+
+    /*
+    This function sets all of our game tracking back into default.
+    */
+
+    gameActive = true;
+    currentPlayer = 'X';
+    gameState = ['', '', '', '', '', '', '', '', ''];
+    displayStatus.innerHTML = currentPlayerTurn();
+    document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = '');
+};
