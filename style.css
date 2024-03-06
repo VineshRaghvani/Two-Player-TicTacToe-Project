@@ -21,6 +21,6 @@ section {
     border: 1px solid #333333; /* Adding a border to the cells */
     cursor: pointer; /* This turns the cursor to a pointer when it hovers over the cell */
     line-height: 100px; /* This centers the content of the cells vertically */
-    font-size: 50px; /* Setting the font-size of the cells to be 50px */
+    font-size: 60px; /* Setting the font-size of the cells to be 50px */
 }
 

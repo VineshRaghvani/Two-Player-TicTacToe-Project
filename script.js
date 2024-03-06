@@ -103,7 +103,7 @@ function handleResultValidation() {
     handlePlayerChange();
 };
 
-function handleCellClick() {
+function handleCellClick(clickedCellEvent) {
 
     /*
     In this function we will check for two things. One is if that the cell
