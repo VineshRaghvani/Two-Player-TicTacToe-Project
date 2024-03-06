@@ -14,7 +14,7 @@ section {
 }
 
 .cell{
-    font-family: 'Monaco', monospace; /* Setting the font of the cell container */
+    font-family: 'Permanent Marker', cursive; /* Setting the font of the cell container */
     width: 100px; /* Setting the width of the cell to be 100px wide */
     height: 100px; /* Setting the height of the cell to be 100px high */
     box-shadow: 0 0 0 1px #333333; /* This adds a shadow effect to the cell */
