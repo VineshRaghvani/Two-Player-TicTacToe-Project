@@ -9,7 +9,7 @@ section {
 .game-container {
     display: grid; /* Displays the grid */
     grid-template-columns: repeat(3, auto); /* Creates the 3x3 grid of equal width */
-    width: auto; /* Sets the width of the game container to adjust based on its contents */
+    width: 306px; /* Sets the width of the game container to adjust based on its contents */
     margin: 50px auto; /* This centers the container horizontally and has a top and bottom margin of 50px */
 }
 
