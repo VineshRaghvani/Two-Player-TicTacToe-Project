@@ -2,7 +2,7 @@
 
 const displayStatus = document.querySelector('.game-status'); //Selects the HTML element with the class 'game-status'.
 
-let gameActive = true; //This keeps track of the status of the game.
+let running = true; //This keeps track of the status of the game.
 
 let currentPlayer = 'X'; //Keeps track of the current player. Starts initially with 'X'.
 
@@ -77,7 +77,7 @@ function handleResultValidation() {
 
     if (roundWon) {
         displayStatus.innerHTML = winningMessage();
-        gameActive = false;
+        running = false;
         return;
     };
 
@@ -90,7 +90,7 @@ function handleResultValidation() {
 
     if (roundDraw) {
         displayStatus.innerHTML = drawMessage();
-        gameActive = false;
+        running = false;
         return;
     };
 
@@ -125,7 +125,7 @@ function handleCellClick(clickedCellEvent) {
     If either is true then we will ignore the click.
     */
 
-    if (gameState[clickedCellIndex] !== '' || !gameActive) {
+    if (gameState[clickedCellIndex] !== '' || !running) {
         return;
     };
 
@@ -140,7 +140,7 @@ function handleRestartGame() {
     This function sets all of our game tracking back into default.
     */
 
-    gameActive = true;
+    running = true;
     currentPlayer = 'X';
     gameState = ['', '', '', '', '', '', '', '', ''];
     displayStatus.innerHTML = currentPlayerTurn();

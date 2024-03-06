@@ -1,6 +1,10 @@
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 93vh;
+    display: center;
     font-family: 'Copperplate', 'Times New Roman', serif; /* Setting the font of the body */
-    background: rgb(0,128,128);
     background: radial-gradient(circle, rgba(0,128,128,1) 0%, rgba(142,145,143,1) 50%);
 }
 
@@ -16,6 +20,9 @@ section {
 }
 
 .cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Permanent Marker', cursive; /* Setting the font of the cell container */
     width: 100px; /* Setting the width of the cell to be 100px wide */
     height: 100px; /* Setting the height of the cell to be 100px high */
@@ -24,6 +31,5 @@ section {
     cursor: pointer; /* This turns the cursor to a pointer when it hovers over the cell */
     line-height: 100px; /* This centers the content of the cells vertically */
     font-size: 60px; /* Setting the font-size of the cells to be 50px */
-    background: rgba(0, 128, 128, 0.6);
 }
 
