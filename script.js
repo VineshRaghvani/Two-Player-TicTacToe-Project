@@ -102,3 +102,34 @@ function handleResultValidation() {
 
     handlePlayerChange();
 };
+
+function handleCellClick() {
+
+    /*
+    In this function we will check for two things. One is if that the cell
+    that the current player is currently clicking on has been played. If it 
+    has not been played then we can continue the game.
+    */
+
+    const clickedCell = clickedCellEvent.target; //Saved the clicked HTML element in a variable for ease of access.
+
+    /*
+    We will now grab the 'data-cell-index' from the clicked cell to identify
+    where the cell is on our grid.
+    */
+
+    const clickedCellIndex = parseInt(clickedCell.getAttribute('data-cell-index'));
+
+    /*
+    Now we check if the cell has already been played or if the game is paused. 
+    If either is true then we will ignore the click.
+    */
+
+    if (gameState[clickedCellIndex] !== '' || !gameActive) {
+        return;
+    };
+
+    //Once everything is ok, we continue with the game.
+    handleCellPlayed(clickedCell, clickedCellIndex);
+    handleResultValidation();
+};
