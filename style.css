@@ -1,5 +1,7 @@
 body {
     font-family: 'Copperplate', 'Times New Roman', serif; /* Setting the font of the body */
+    background: rgb(0,128,128);
+    background: radial-gradient(circle, rgba(0,128,128,1) 0%, rgba(142,145,143,1) 50%);
 }
 
 section {
@@ -9,18 +11,19 @@ section {
 .game-container {
     display: grid; /* Displays the grid */
     grid-template-columns: repeat(3, auto); /* Creates the 3x3 grid of equal width */
-    width: 306px; /* Sets the width of the game container to adjust based on its contents */
-    margin: 50px auto; /* This centers the container horizontally and has a top and bottom margin of 50px */
+    width: 300px; /* Sets the width of the game container to adjust based on its contents */
+    margin: auto; /* This centers the container horizontally and has a top and bottom margin of 50px */
 }
 
 .cell{
     font-family: 'Permanent Marker', cursive; /* Setting the font of the cell container */
     width: 100px; /* Setting the width of the cell to be 100px wide */
     height: 100px; /* Setting the height of the cell to be 100px high */
-    box-shadow: 0 0 0 1px #333333; /* This adds a shadow effect to the cell */
-    border: 1px solid #333333; /* Adding a border to the cells */
+    box-shadow: 0 0 0 1px #000000; /* This adds a shadow effect to the cell */
+    border: 1px solid #000000; /* Adding a border to the cells */
     cursor: pointer; /* This turns the cursor to a pointer when it hovers over the cell */
     line-height: 100px; /* This centers the content of the cells vertically */
     font-size: 60px; /* Setting the font-size of the cells to be 50px */
+    background: rgba(0, 128, 128, 0.6);
 }
 
